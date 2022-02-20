@@ -22,7 +22,7 @@
 
 <script lang="ts">
 
-import { ContextOption } from '@/plugins/BeekeeperPlugin'
+import { ContextOption } from '@/plugins/SQLCodePlugin'
 import Vue from 'vue'
 
 export default Vue.extend({

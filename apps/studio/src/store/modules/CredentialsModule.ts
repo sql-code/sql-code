@@ -8,7 +8,7 @@ import { State as RootState } from '../index'
 import { upsert } from "./data/StoreHelpers";
 
 function genAppId() {
-  return `beekeeper-app-${uuidv4()}`
+  return `sql-code-app-${uuidv4()}`
 }
 
 export interface WSWithClient {

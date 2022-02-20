@@ -18,7 +18,7 @@ interface MenuProps {
   event: Event
 }
 
-export const BeekeeperPlugin = {
+export const SQLCodePlugin = {
   closeTab(id?: string) {
     this.$root.$emit(AppEvent.closeTab, id)
   },
@@ -72,12 +72,12 @@ export const BeekeeperPlugin = {
   }
 }
 
-export type BeekeeperPlugin = typeof BeekeeperPlugin
+export type SQLCodePlugin = typeof SQLCodePlugin
 
 
 export default {
   install(Vue) {
-    Vue.prototype.$app = BeekeeperPlugin
-    Vue.prototype.$bks = BeekeeperPlugin
+    Vue.prototype.$app = SQLCodePlugin
+    Vue.prototype.$plugin = SQLCodePlugin
   }
 }

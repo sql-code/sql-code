@@ -7,7 +7,7 @@
         :class="{ active: activeItem === 'tables'}"
         title="Database"
       >
-        <span class="bk-database"></span>
+        <span class="icn-database"></span>
       </a>
       <a
         href=""

@@ -67,7 +67,7 @@ export default Vue.extend({
       }
     },
     openContextMenu(event, item) {
-      this.$bks.openMenu({
+      this.$plugin.openMenu({
         item, event,
         options: [
           {
@@ -77,7 +77,7 @@ export default Vue.extend({
           {
             name: "Rename",
             handler: ({ item }) => this.$emit('rename', item)
-            
+
           },
           {
             name: "Delete",
@@ -91,6 +91,6 @@ export default Vue.extend({
       })
     },
   }
-  
+
 })
 </script>

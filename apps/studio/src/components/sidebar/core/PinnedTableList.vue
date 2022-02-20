@@ -16,7 +16,7 @@
           :forceExpand="allExpanded"
           :forceCollapse="allCollapsed"
           :noSelect="true"
-          @contextmenu.prevent.stop="$bks.openMenu({item: p.entity, event: $event, options: tableMenuOptions})"
+          @contextmenu.prevent.stop="$plugin.openMenu({item: p.entity, event: $event, options: tableMenuOptions})"
 
         />
         <routine-list-item
@@ -27,12 +27,12 @@
           :pinned="true"
           :forceExpand="forceExpand"
           :forceCollapse="forceCollapse"
-          @contextmenu.prevent.stop="$bks.openMenu({item: p.entity, event: $event, options: routineMenuOptions})"
+          @contextmenu.prevent.stop="$plugin.openMenu({item: p.entity, event: $event, options: routineMenuOptions})"
 
         />
-        
+
       </div>
-  
+
 
     </Draggable>
   </nav>
@@ -60,6 +60,6 @@ export default Vue.extend({
       }
     }
   }
-  
+
 })
 </script>

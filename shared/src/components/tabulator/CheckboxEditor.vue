@@ -1,6 +1,6 @@
 <template>
-  <div class="tabulator-bks-checkbox tabulator-checkbox-editor">
-    <input type="checkbox" ref="input" v-model="checked" @keydown="keydown" @blur="submit" /> 
+  <div class="tabulator-checkbox tabulator-checkbox-editor">
+    <input type="checkbox" ref="input" v-model="checked" @keydown="keydown" @blur="submit" />
   </div>
 </template>
 <script lang="ts">

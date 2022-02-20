@@ -30,7 +30,7 @@ Here are the tooks I recommend for taking quick and easy screen captures as GIF 
 Just copy/paste the screen recording into your Github issue and GitHub will figure out the rest.
 
 
-## How to Debug Beekeeper Studio
+## How to Debug SQL Code
 
 ### Check Developer Tools for errors
 
@@ -48,7 +48,7 @@ Windows: %USERPROFILE%\AppData\Roaming\beekeeper-studio\logs\{process type}.log
 
 By default they will only contain uncaught errors.
 
-You can enable extended logging by starting Beekeeper Studio with the debug flag `DEBUG=*`.
+You can enable extended logging by starting SQL Code with the debug flag `DEBUG=*`.
 
 On linux, just run the app like this: `DEBUG=* beekeeper-studio`
 
@@ -63,13 +63,13 @@ Before version 8.0 MySQL did not support `DESC` indexes, but it did support the 
 
 This is a 'feature' of MySQL to make it more compatible with other engines.
 
-If you edit your indexes in Beekeeper Studio and create a `DESC` index it will simply create a `ASC` index instead.
+If you edit your indexes in SQL Code and create a `DESC` index it will simply create a `ASC` index instead.
 
 As of version 8.0 this issue has been solved.
 
 ### I get a SQL syntax error when trying to create a stored procedure
 
-When using the `mysql` command line client you need to remap delimiters using `DELIMITER`, however this syntax isn't supported by MySQL server itself, so it errors when run through Beekeeper Studio.
+When using the `mysql` command line client you need to remap delimiters using `DELIMITER`, however this syntax isn't supported by MySQL server itself, so it errors when run through SQL Code.
 
 You'll likely get an error like `You have an error in your SQL syntax`. Simply remove the delimiter statements to fix it.
 
@@ -112,7 +112,7 @@ If you're on another platform, please [open a ticket][bug] and we'll try to help
 
 ## PostgreSQL
 
-Please note that Beekeeper Studio only officially supports Postgres 9.3+, although older versions may mostly work.
+Please note that SQL Code only officially supports Postgres 9.3+, although older versions may mostly work.
 
 ### I get a `column does not exist` error, but the column does exist!
 

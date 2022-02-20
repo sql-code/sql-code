@@ -3,15 +3,15 @@
     <a class="list-item-btn" role="button" v-bind:class="{'active': selected,'open': showArgs }">
       <span class="btn-fab open-close" @mousedown.prevent="toggleArgs" @contextmenu.stop.prevent="" >
         <i v-if="displayParams.length > 0" class="dropdown-icon material-icons">keyboard_arrow_right</i>
-      </span>      
+      </span>
       <span class="item-wrapper flex flex-middle expand">
         <i :title="title" :class="iconClass" class="item-icon material-icons">functions</i>
         <span class="table-name truncate" :title="routine.name">{{routine.name}}</span>
       </span>
       <span class="actions" v-bind:class="{'pinned': pinned}">
-        <span v-if="!pinned" @mousedown.prevent.stop="pin" class="btn-fab pin" :title="'Pin'"><i class="bk-pin"></i></span>
+        <span v-if="!pinned" @mousedown.prevent.stop="pin" class="btn-fab pin" :title="'Pin'"><i class="icn-pin"></i></span>
         <span v-if="pinned" @mousedown.prevent.stop="unpin" class="btn-fab unpin" :title="'Unpin'"><i class="material-icons">clear</i></span>
-        <span v-if="pinned" class="btn-fab pinned"><i class="bk-pin" :title="'Unpin'"></i></span>
+        <span v-if="pinned" class="btn-fab pinned"><i class="icn-pin" :title="'Unpin'"></i></span>
       </span>
     </a>
     <div v-if="showArgs" class="sub-items">

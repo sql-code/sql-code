@@ -10,7 +10,7 @@ export enum AppEvent {
   newTab = 'nt',
   closeTab = 'ct',
   disconnect = 'dc',
-  beekeeperAdded = 'bkadd',
+  sqlCodeAdded = 'bkadd',
   openExternally = 'oe',
   toggleSidebar = 'ts',
   beginExport = 'be',

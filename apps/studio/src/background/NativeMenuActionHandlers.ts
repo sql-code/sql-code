@@ -72,18 +72,18 @@ export default class NativeMenuActionHandlers implements IMenuActionHandler {
   }
   about() {
     app.setAboutPanelOptions({
-      applicationName: "Beekeeper Studio",
+      applicationName: "SQL Code",
       applicationVersion: app.getVersion(),
-      copyright: "Beekeeper Studio Team",
-      authors: ["Matthew Rathbone", "Gregory Garden", "All the wonderful Github contributors"],
-      website: "https://beekeeperstudio.io",
+      copyright: "SQL Code Maintainers",
+      authors: ["Lauris BH", "Matthew Rathbone", "Gregory Garden", "All the wonderful Github contributors"],
+      website: "https://sqlcode.io",
       iconPath: getIcon()
     })
     app.showAboutPanel()
   }
 
   opendocs() {
-    shell.openExternal("https://docs.beekeeperstudio.io/")
+    shell.openExternal("https://docs.sqlcode.io/")
   }
 
   devtools(_1: Electron.MenuItem, win: ElectronWindow) {
@@ -114,17 +114,17 @@ export default class NativeMenuActionHandlers implements IMenuActionHandler {
     })
   }
 
-  addBeekeeper = async (_1: Electron.MenuItem, win: ElectronWindow) => {
+  addSQLCode = async (_1: Electron.MenuItem, win: ElectronWindow) => {
     const existing = await SavedConnection.findOne({where: { defaultDatabase: platformInfo.appDbPath }})
     if (!existing) {
       const nu = new SavedConnection()
       nu.connectionType = 'sqlite'
       nu.defaultDatabase = platformInfo.appDbPath
-      nu.name = "Beekeeper's Database"
+      nu.name = "SQL Code's Database"
       nu.labelColor = 'orange'
       await nu.save()
     }
-    if (win) win.webContents.send(AppEvent.beekeeperAdded)
+    if (win) win.webContents.send(AppEvent.sqlCodeAdded)
   }
 
   switchMenuStyle = async (menuItem: Electron.MenuItem) => {

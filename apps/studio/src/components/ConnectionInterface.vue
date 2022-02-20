@@ -51,7 +51,7 @@
           </div>
         </div>
 
-        <small class="app-version"><a href="https://www.beekeeperstudio.io/releases/latest">Beekeeper Studio Ultimate {{version}}</a></small>
+        <small class="app-version"><a href="https://sqlcode.io/releases/latest">SQL Code {{version}}</a></small>
       </div>
     </div>
   </div>

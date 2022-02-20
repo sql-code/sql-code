@@ -1,5 +1,5 @@
 <template>
-  <modal name="import-connections" class="vue-dialog beekeeper-modal" >
+  <modal name="import-connections" class="vue-dialog sqlcode-modal" >
     <div class="dialog-content">
       <div class="dialog-c-title">Import Connections</div>
       <div class="dialog-c-subtitle">Importing a connection will copy it from your local workspace into your cloud workspace. Imported connections are private to you by default.</div>
@@ -7,7 +7,7 @@
       <div>
         <div class="list-group">
           <div class="list-body">
-            <div 
+            <div
               class="list-item"
               v-for="connection in connections"
               :key="connection.id"

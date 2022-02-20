@@ -57,7 +57,7 @@
       </div>
       </div>
     </div>
-    <modal class="vue-dialog beekeeper-modal" name="rename-modal" @closed="renameMe=null" height="auto" :scrollable="true">
+    <modal class="vue-dialog sqlcode-modal" name="rename-modal" @closed="renameMe=null" height="auto" :scrollable="true">
       <div class="dialog-content" v-if="renameMe">
         <div class="dialog-c-title">Rename {{renameMe.title}}</div>
         <query-rename-form :query="renameMe" @done="$modal.hide('rename-modal')" />
@@ -105,7 +105,7 @@ import QueryRenameForm from '@/components/common/form/QueryRenameForm.vue'
         return this.folders.map((folder) => {
           return {
             folder,
-            queries: this.savedQueries.filter((q) => 
+            queries: this.savedQueries.filter((q) =>
               q.queryFolderId === folder.id
             )
           }

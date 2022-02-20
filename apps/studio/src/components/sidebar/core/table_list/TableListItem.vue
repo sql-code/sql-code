@@ -9,9 +9,9 @@
         <span class="table-name truncate" :title="table.name">{{table.name}}</span>
       </span>
       <span class="actions" v-bind:class="{'pinned': pinned}">
-        <span v-if="!pinned" @mousedown.prevent.stop="pin" class="btn-fab pin" :title="'Pin'"><i class="bk-pin"></i></span>
+        <span v-if="!pinned" @mousedown.prevent.stop="pin" class="btn-fab pin" :title="'Pin'"><i class="icn-pin"></i></span>
         <span v-if="pinned" @mousedown.prevent.stop="unpin" class="btn-fab unpin" :title="'Unpin'"><i class="material-icons">clear</i></span>
-        <span v-if="pinned" class="btn-fab pinned"><i class="bk-pin" :title="'Unpin'"></i></span>
+        <span v-if="pinned" class="btn-fab pinned"><i class="icn-pin" :title="'Unpin'"></i></span>
       </span>
     </a>
     <div v-if="showColumns" class="sub-items">
@@ -104,7 +104,7 @@ import TableIcon from '@/components/common/TableIcon.vue'
         const tableSelected = this.activeTab && this.activeTab.table &&
           this.activeTab.table.name === this.table.name &&
           this.activeTab.table.schema === this.table.schema
-        
+
         return tableSelected
       },
       ...mapGetters(['selectedSidebarItem']),

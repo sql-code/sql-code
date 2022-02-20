@@ -1,7 +1,7 @@
 <template>
   <div class="merge-manager">
     <div v-if="pendingMerge" class="alert alert-notice">
-      <i class="material-icons">info_outlined</i> 
+      <i class="material-icons">info_outlined</i>
       <div class="alert-body">Merge Completed</div>
       <span class="alert-footer btn-group">
         <span class="expand"></span>
@@ -9,9 +9,9 @@
         <a class="btn btn-sm btn-primary" @click.prevent="acceptMerge" title="Like magic">Looks Good</a>
       </span>
     </div>
-    
+
     <div v-else-if="pendingRemoteChanges" class="alert alert-info">
-      <i class="material-icons">error_outline</i> 
+      <i class="material-icons">error_outline</i>
       <div class="alert-body">This query has been updated by someone else.</div>
       <span class="alert-footer btn-group">
         <span class="expand"></span>
@@ -30,7 +30,7 @@
       </span>
     </div>
 
-    <modal name="diff-modal" class="beekeeper-modal vue-dialog diff-modal" >
+    <modal name="diff-modal" class="sqlcode-modal vue-dialog diff-modal" >
       <div class="dialog-content">
         <div class="dialog-c-title">Merge Preview</div>
         <diff-viewer v-if="diff" :diff="diff"/>
@@ -134,7 +134,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
   @import '@/assets/styles/app/_variables';
-  
+
   .merge-manager {
     margin: 0 $gutter-h;
     > i {

@@ -45,7 +45,7 @@ export default {
       defaultDatabase: 'sakila'
     },
     {
-      name: "Beekeeper's Database",
+      name: "SQL Code's Database",
       connectionType: "sqlite",
       defaultDatabase: platformInfo.appDbPath
     }

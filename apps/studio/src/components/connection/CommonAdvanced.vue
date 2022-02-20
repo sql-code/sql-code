@@ -34,7 +34,7 @@
         <div class="alert alert-warning" v-if="$config.isSnap">
           <i class="material-icons">error_outline</i>
           <div>
-            SSH Agent Forwarding is not possible with the Snap version of Beekeeper Studio due to the security model of Snap apps.
+            SSH Agent Forwarding is not possible with the Snap version of SQL Code due to the security model of Snap apps.
             <external-link :href="enableSshLink">Read more</external-link>
           </div>
         </div>
@@ -65,7 +65,7 @@
           <div class="alert alert-warning">
             <i class="material-icons">error_outline</i>
             <div>
-              Hey snap user! You need to <external-link :href="enableSshLink">enable SSH access</external-link>, then restart Beekeeper to provide access to your .ssh directory.
+              Hey snap user! You need to <external-link :href="enableSshLink">enable SSH access</external-link>, then restart SQL Code to provide access to your .ssh directory.
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@
     },
     data() {
       return {
-        enableSshLink: "https://docs.beekeeperstudio.io/installation/#ssh-key-access-for-the-snap",
+        enableSshLink: "https://docs.sqlcode.io/installation/#ssh-key-access-for-the-snap",
         sshModeOptions: [
           { label: "Key File", mode: 'keyfile' },
           { label: "Username & Password", mode: "userpass" },

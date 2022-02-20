@@ -1,5 +1,5 @@
 <template>
-  <div class="tabulator-bks-checkbox" :class="editable ? 'editable' : 'read-only'" @mousedown.prevent.stop="click">
+  <div class="tabulator-checkbox" :class="editable ? 'editable' : 'read-only'" @mousedown.prevent.stop="click">
     <input type="checkbox" :disabled="!editable" @mousedown.prevent.stop="click" :checked="checked" />
   </div>
 </template>
@@ -20,8 +20,8 @@
     },
     computed: {
       editable(): boolean {
-        return _.isFunction(this.params.editable) ? 
-          this.params.editable(this.cell) : 
+        return _.isFunction(this.params.editable) ?
+          this.params.editable(this.cell) :
           this.params.editable
       }
     },

@@ -91,7 +91,7 @@ export default Vue.extend({
       const editable = this.editable
       const dataColumns = [
         {
-          title: 'Name', 
+          title: 'Name',
           field: 'columnName',
           editor: vueEditor(NullableInputEditor),
           formatter: this.cellFormatter,
@@ -107,7 +107,7 @@ export default Vue.extend({
           cssClass: "no-padding no-edit-highlight",
           headerTooltip: "Allow this column to contain a null value",
           editor: vueEditor(CheckboxEditor),
-          formatter: vueFormatter(CheckboxFormatter), 
+          formatter: vueFormatter(CheckboxFormatter),
           formatterParams: {
             editable
           },
@@ -150,9 +150,9 @@ export default Vue.extend({
           headerTooltip: "Leave a friendly comment for other database users about this column"
         },
         {
-          title: 'Primary', field: 'primaryKey', 
+          title: 'Primary', field: 'primaryKey',
           editor: vueEditor(CheckboxEditor),
-          formatter: vueFormatter(CheckboxFormatter), 
+          formatter: vueFormatter(CheckboxFormatter),
           formatterParams: {
             editable
           },
@@ -229,7 +229,7 @@ export default Vue.extend({
   $btn-fab-size:           32px;
 
   .schema-builder {
-    
+
     // Schema Header
     .schema-header {
       margin-bottom: $gutter-h;
@@ -322,8 +322,8 @@ export default Vue.extend({
             box-shadow: none!important;
             input[type="checkbox"] {
               box-shadow: inset 0 0 0 2px $theme-base;
-              &:active, 
-              &:checked, 
+              &:active,
+              &:checked,
               &:checked:active {
                 background: rgba($theme-base, 0.5)!important;
                 color: $theme-bg!important;
@@ -360,7 +360,7 @@ export default Vue.extend({
             }
           }
         }
-        
+
         .material-icons.clear {
           color: $text-lighter;
           &:hover {
@@ -369,7 +369,7 @@ export default Vue.extend({
         }
 
         // Make checkboxes behave correctly
-        .tabulator-bks-checkbox {
+        .tabulator-checkbox {
           display: flex;
           align-items: center;
           height: $row-height;
@@ -389,7 +389,7 @@ export default Vue.extend({
       }
     }
 
-    
+
     // Resize Handle
     .tabulator-header,
     .tabulator-row {
@@ -456,8 +456,8 @@ export default Vue.extend({
           box-shadow: none!important;
           input[type="checkbox"] {
             box-shadow: inset 0 0 0 2px $theme-base;
-            &:active, 
-            &:checked, 
+            &:active,
+            &:checked,
             &:checked:active {
               background: rgba($theme-base, 0.5)!important;
               box-shadow: none!important;

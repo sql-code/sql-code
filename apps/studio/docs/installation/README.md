@@ -2,12 +2,12 @@
 title: Installation
 ---
 
-Beekeeper Studio can be installed on Mac, Windows, and Linux desktops.
+SQL Code can be installed on Mac, Windows, and Linux desktops.
 
 
 ## Mac Installation
 
-Download the `dmg` installer file from [our website](https://beekeeperstudio.io), then drag the Beekeeper Studio application into your application drawer.
+Download the `dmg` installer file from [our website](https://beekeeperstudio.io), then drag the SQL Code application into your application drawer.
 
 Note that by default MacOS will prevent you from installing third-party distributed apps (through the Mac app store). To enable this, navigate to `Settings -> Security and Privacy`, and enable `App Store and Identified Developers`:
 
@@ -19,7 +19,7 @@ Download and run the Windows installer from [our website](https://beekeeperstudi
 
 ## Linux Installation
 
-There are several ways to install Beekeeper Studio on Linux systems. We recommend installing through Apt if you are on Ubuntu due to the limitations in Snap packages.
+There are several ways to install SQL Code on Linux systems. We recommend installing through Apt if you are on Ubuntu due to the limitations in Snap packages.
 
 Supported Architectures: x86-64, ARM64, armv7l, and a special build for the Raspberry Pi (armhf)
 
@@ -41,32 +41,19 @@ sudo apt install beekeeper-studio
 
 ```
 
-#### Migrating from Bintray
-
-In Febrary 2021, JFrog announced they were turning off Bintray.
-If you installed Beekeeper Studio prior to that date, you'll need to upgrade your repository setting.
-
-From release 1.9.5 our deb post-install script should do this automatically, if that didn't work for some reason do this:
-
-1. `sudo rm /etc/apt/sources.list.d/beekeeper-studio.list`
-2. Follow the install instructions above
-
-
 ### AppImage
 
-AppImages can be download and run directly on most Linux distributions without any sort of installation. This is great if you don't have root access, but still want to use Beekeeper Studio.
+AppImages can be download and run directly on most Linux distributions without any sort of installation. This is great if you don't have root access, but still want to use SQL Code.
 
 AppImage builds are auto-updating.
 
-Download the latest AppImage [from the Beekeeper Studio homepage](https://www.beekeeperstudio.io/)
+Download the latest AppImage [from the SQL Code homepage](https://www.beekeeperstudio.io/)
 
 If you want to integrate the AppImage into your system shell (so it appears in your Application menu), we recommend you [install AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher/releases/latest).
 
-
-
 ### Snap Store / Ubuntu Store
 
-You can also install Beekeeper Studio through Snapcraft (also part of the Ubuntu Store). Use either the Snap Store link below, or install through the terminal.
+You can also install SQL Code through Snapcraft (also part of the Ubuntu Store). Use either the Snap Store link below, or install through the terminal.
 
 `snap` is pre-installed on Ubuntu 16.04+, and can be installed on [Fedora](https://snapcraft.io/docs/installing-snap-on-fedora), and [Arch](https://snapcraft.io/docs/installing-snap-on-arch-linux)
 
@@ -88,9 +75,9 @@ Run `sudo snap connect beekeeper-studio:ssh-keys :ssh-keys`.
 
 ### Raspberry Pi
 
-Beekeeper Studio supports armhf/armv7l and arm64 which means you can run Beekeeper Studio on Raspberry Pi 2B and newer.
+SQL Code supports armhf/armv7l and arm64 which means you can run SQL Code on Raspberry Pi 2B and newer.
 
-To install Beekeeper Studio on Raspberry Pi do one of the following:
+To install SQL Code on Raspberry Pi do one of the following:
 
 - Install [using apt](#apt-deb)
 - Download the AppImage [from GitHub](https://github.com/beekeeper-studio/beekeeper-studio/releases/latest). You want the `armv7l` version or the `arm64` version if you are running a 64bit OS on your pi. (If you don't know which you are running, use `armv7l`)

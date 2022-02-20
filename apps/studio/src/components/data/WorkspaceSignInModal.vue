@@ -1,5 +1,5 @@
 <template>
-  <modal name="workspace" class="vue-dialog beekeeper-modal" @opened="focus" >
+  <modal name="workspace" class="vue-dialog sqlcode-modal" @opened="focus" >
     <form @submit.prevent="login">
       <div class="dialog-content">
         <div v-if="lockEmail" class="dialoc-c-title">Reauthenticate {{email ? email : ''}}</div>

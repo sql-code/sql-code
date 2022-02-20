@@ -8,7 +8,7 @@
           <div class="alert alert-warning" v-if="$config.isSnap">
             <i class="material-icons">error_outline</i>
             <div>
-              Hey snap user! If you want to use a sqlite database on an external drive you'll need to give Beekeeper some extra permissions
+              Hey snap user! If you want to use a sqlite database on an external drive you'll need to give SQL Code some extra permissions
               <external-link :href="snap">Read more</external-link>
             </div>
           </div>
@@ -27,7 +27,7 @@
     },
     data() {
       return {
-        snap: "http://docs.beekeeperstudio.io/troubleshooting/#i-get-permission-denied-when-trying-to-access-a-database-on-an-external-drive"
+        snap: "http://docs.sqlcode.io/troubleshooting/#i-get-permission-denied-when-trying-to-access-a-database-on-an-external-drive"
       }
     }
   }

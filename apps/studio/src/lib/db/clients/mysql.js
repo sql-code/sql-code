@@ -479,7 +479,7 @@ export function query(conn, queryText) {
             throw err
           } else if (queryText && _.trim(queryText).toUpperCase().startsWith("DELIMITER")) {
             const nuError = Error(`DELIMITER is only supported in the command line client, ${err.message}`)
-            nuError.helpLink = "https://docs.beekeeperstudio.io/troubleshooting/#mysql"
+            nuError.helpLink = "https://docs.sqlcode.io/troubleshooting/#mysql"
             throw nuError
           } else {
             throw err;

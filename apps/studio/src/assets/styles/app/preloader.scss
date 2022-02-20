@@ -1,6 +1,6 @@
 // Adapted from https://codepen.io/akwright/pen/fmDiK/?editors=0100 / Codepen / @akwright
 
-.beekeeper-studio-wrapper {
+.sql-code-wrapper {
   $preloader-duration:  0.75s;
   $preloader-dimension: 1.25rem;
 
@@ -34,7 +34,7 @@
   }
   @keyframes moveup {
     0%, 60%, 100% {
-      transform: 
+      transform:
         rotateX(50deg)
         rotateY(0deg)
         rotateZ(45deg)
@@ -50,7 +50,7 @@
   }
   @keyframes movedown {
     0%, 60%, 100% {
-      transform: 
+      transform:
         rotateX(50deg)
         rotateY(0deg)
         rotateZ(45deg)

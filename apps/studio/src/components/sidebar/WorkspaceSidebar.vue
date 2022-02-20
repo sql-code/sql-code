@@ -7,7 +7,7 @@
           :class="{active: blob.workspace.id === workspaceId}"
           class="workspace-item nav-item selectable"
           v-tooltip.right-end="workspaceTitle(blob.workspace)"
-          @contextmenu="$bks.openMenu({item: blob, options: contextOptionsFor(blob), event: $event})"
+          @contextmenu="$plugin.openMenu({item: blob, options: contextOptionsFor(blob), event: $event})"
           @click.prevent="click(blob)"
         >
           <span class="avatar">
@@ -48,7 +48,7 @@ components: { NewWorkspaceButton, WorkspaceAvatar, AccountStatusButton, ContentP
     ...mapState('credentials', ['credentials', 'loading']),
     ...mapState(['workspaceId']),
     ...mapGetters('credentials', { 'availableWorkspaces': 'workspaces'}),
-    
+
   },
   methods: {
     contextOptionsFor(blob: WSWithClient ) {

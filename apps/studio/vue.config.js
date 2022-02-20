@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const fpmOptions = [
-  "--after-install=build/deb-postinstall"
-]
+const fpmOptions = []
 
 if (  process.env.PI_BUILD ) {
   fpmOptions.push("--architecture")
@@ -41,8 +39,8 @@ module.exports = {
       nodeIntegration: true,
       externals,
       builderOptions: {
-        appId: "io.beekeeperstudio.desktop",
-        productName: "Beekeeper Studio",
+        appId: "io.sqlcode.desktop",
+        productName: "SQL Code",
         releaseInfo: {
           releaseNotesFile: "build/release-notes.md"
         },
@@ -116,7 +114,7 @@ module.exports = {
         mac: {
           entitlements: "./build/entitlements.mac.plist",
           entitlementsInherit: "./build/entitlements.mac.plist",
-          icon: './public/icons/mac/bk-icon.icns',
+          icon: './public/icons/mac/icon.icns',
           category: "public.app-category.developer-tools",
           "hardenedRuntime": true
         },
@@ -129,7 +127,7 @@ module.exports = {
             'appImage'
           ],
           desktop: {
-            'StartupWMClass': 'beekeeper-studio'
+            'StartupWMClass': 'sql-code'
           },
         },
         deb: {
@@ -174,19 +172,6 @@ module.exports = {
         DIFF_DELETE: ['diff-match-patch', 'DIFF_DELETE'],
       }),
     ],
-
-    // externals: {
-    //   // Possible drivers for knex - we'll ignore them
-    //   // 'sqlite3': 'sqlite3',
-    //   'mariasql': 'mariasql',
-    //   // 'mssql': 'mssql',
-    //   'mysql': 'mysql',
-    //   'oracle': 'oracle',
-    //   'strong-oracle': 'strong-oracle',
-    //   'oracledb': 'oracledb',
-    //   // 'pg': 'pg',
-    //   // 'pg-query-stream': 'pg-query-stream'
-    // },
     node: {
       dns: 'mock'
     },
@@ -205,6 +190,5 @@ module.exports = {
         }
       ]
     }
-
   }
 }

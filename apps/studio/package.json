@@ -1,12 +1,12 @@
 {
-  "name": "beekeeper-studio",
+  "name": "sql-code",
   "version": "3.1.0",
   "private": true,
   "description": "An easy-to use SQL query editor and database UI for Mac, Windows, and Linux",
   "author": {
-    "name": "Beekeeper Studio Team",
-    "email": "matthew@rathbonelabs.com",
-    "url": "https://beekeeperstudio.io"
+    "name": "SQL Code Maintainers",
+    "email": "info@sqlcode.io",
+    "url": "https://sqlcode.io"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -151,7 +151,7 @@
     "> 1%",
     "last 2 versions"
   ],
-  "repository": "git@github.com:beekeeper-studio/beekeeper-studio.git",
+  "repository": "git@github.com:sql-code/sql-code.git",
   "resolutions": {
     "watchpack": "1.6.1",
     "node-ssh-forward/ssh2": "beekeeper-studio/ssh2#electron-detection",

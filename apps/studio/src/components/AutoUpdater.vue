@@ -16,7 +16,7 @@ export default {
         layout: 'bottomRight',
         timeout: false,
         closeWith: 'button',
-        buttons: [ 
+        buttons: [
           Noty.button('Not now', 'btn btn-flat', () => {
             this.manualNotification.close();
           }),
@@ -38,7 +38,7 @@ export default {
         queue: 'download'
       }),
       installNotification: new Noty({
-        text: "Update downloaded. Restart Beekeeper Studio to install",
+        text: "Update downloaded. Restart SQL Code to install",
         layout: 'bottomRight',
         timeout: false,
         closeWith: 'button',
@@ -75,7 +75,7 @@ export default {
       this.manualNotification.show()
     },
     linkToDownload() {
-      ipcRenderer.send(AppEvent.openExternally, ["https://beekeeperstudio.io/get"])
+      ipcRenderer.send(AppEvent.openExternally, ["https://sqlcode.io/get"])
     },
     triggerInstall() {
       ipcRenderer.send('install-update')

@@ -4,7 +4,7 @@
       <img src="@/assets/logo.svg" />
       <AppMenu></AppMenu>
     </div>
-    <div class="titlebar-title noselect">Beekeeper Studio</div>
+    <div class="titlebar-title noselect">SQL Code</div>
     <div class="titlebar-actions" v-if="!$config.isMac">
       <template>
         <button class="btn btn-link" id="minimize" @click.prevent="minimizeWindow"><i class="material-icons">remove</i></button>

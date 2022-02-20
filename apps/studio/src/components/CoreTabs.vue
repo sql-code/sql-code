@@ -14,7 +14,7 @@
           @closeAll="closeAll"
           @closeOther="closeOther"
           @duplicate="duplicate"
-          @contextmenu="$bks.openMenu({item: tab, options: contextOptions, event: $event})"
+          @contextmenu="$plugin.openMenu({item: tab, options: contextOptions, event: $event})"
           ></core-tab-header>
       </Draggable>
       <!-- </div> -->

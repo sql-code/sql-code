@@ -25,5 +25,5 @@ export interface IMenuActionHandler {
   switchMenuStyle: (menuItem: Electron.MenuItem, win: ElectronWindow) => void
   reload: (menuItem: Electron.MenuItem, win: ElectronWindow) => void
   disconnect: (menuItem: Electron.MenuItem, win: ElectronWindow) => void
-  addBeekeeper: (menuItem: Electron.MenuItem, win: ElectronWindow) => void
+  addSQLCode: (menuItem: Electron.MenuItem, win: ElectronWindow) => void
 }

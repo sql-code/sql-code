@@ -14,7 +14,7 @@ export default class {
     this.ipcRenderer.on(AppEvent.settingsChanged, this.settingsChanged.bind(this))
     this.ipcRenderer.on(AppEvent.menuStyleChanged, this.menuStyle.bind(this))
     this.ipcRenderer.on(AppEvent.disconnect, this.disconnect.bind(this))
-    this.ipcRenderer.on(AppEvent.beekeeperAdded, this.addBeekeeper.bind(this))
+    this.ipcRenderer.on(AppEvent.sqlCodeAdded, this.addSQLCode.bind(this))
     this.forward(AppEvent.closeTab)
     this.forward(AppEvent.newTab)
     this.forward(AppEvent.toggleSidebar)
@@ -32,8 +32,8 @@ export default class {
     this.vueApp.$emit(AppEvent.closeTab)
   }
 
-  addBeekeeper() {
-    this.vueApp.$noty.success("Beekeeper's Database has been added to your Saved Connections")
+  addSQLCode() {
+    this.vueApp.$noty.success("SQL Code's Database has been added to your Saved Connections")
     this.vueApp.$store.dispatch('data/connections/load')
   }
 
@@ -46,6 +46,6 @@ export default class {
   }
 
   menuStyle() {
-    this.vueApp.$noty.success("Restart Beekeeper for the change to take effect")
+    this.vueApp.$noty.success("Restart SQL Code for the change to take effect")
   }
 }

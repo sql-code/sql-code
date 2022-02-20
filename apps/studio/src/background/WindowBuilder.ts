@@ -10,7 +10,7 @@ import querystring from 'query-string'
 
 const log = rawLog.scope('WindowBuilder')
 
-const windows: BeekeeperWindow[] = []
+const windows: SQLCodeWindow[] = []
 
 export interface OpenOptions {
   url?: string
@@ -20,7 +20,7 @@ function getIcon() {
   return path.resolve(path.join(__dirname, '..', `public/icons/png/512x512.png`))
 }
 
-class BeekeeperWindow {
+class SQLCodeWindow {
   private win: BrowserWindow | null
   private reloaded = false
 
@@ -104,5 +104,5 @@ export function getActiveWindows() {
 }
 
 export function buildWindow(settings: IGroupedUserSettings, options?: OpenOptions) {
-  windows.push(new BeekeeperWindow(settings, options))
+  windows.push(new SQLCodeWindow(settings, options))
 }

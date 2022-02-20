@@ -36,7 +36,7 @@ import log from 'electron-log'
 import VueClipboard from 'vue-clipboard2'
 import platformInfo from './common/platform_info'
 import { AppEventMixin } from './common/AppEvent'
-import BeekeeperPlugin from './plugins/BeekeeperPlugin'
+import SQLCodePlugin from './plugins/SQLCodePlugin'
 import 'codemirror/addon/merge/merge'
 import _ from 'lodash'
 
@@ -112,7 +112,7 @@ import _ from 'lodash'
     Vue.use(VModal)
     Vue.use(VueClipboard)
     Vue.use(ConfigPlugin)
-    Vue.use(BeekeeperPlugin)
+    Vue.use(SQLCodePlugin)
     Vue.use(VueElectronPlugin)
     Vue.use(PortalVue)
     Vue.use(VueNoty, {

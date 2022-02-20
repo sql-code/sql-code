@@ -1,8 +1,8 @@
 {
-  "name": "bks-root",
+  "name": "sql-code-root",
   "version": "1.0.0",
-  "repository": "git@github.com:beekeeper-studio/beekeeper-studio.git",
-  "author": "Matthew Rathbone <matthew.rathbone@gmail.com>",
+  "repository": "git@github.com:sql-code/sql-code.git",
+  "author": "SQL Code Maintainers <info@sqlcode.io>",
   "license": "MIT",
   "private": true,
   "workspaces": {
@@ -11,14 +11,11 @@
     ]
   },
   "scripts": {
-    "bks:build": "yarn workspace beekeeper-studio electron:build",
-    "bks:dev": "yarn workspace beekeeper-studio electron:serve",
-    "sqltools:build": "yarn workspace sqltools build",
-    "sqltools:dev": "yarn workspace sqltools serve",
-    "electron:build": "yarn bks:build",
-    "electron:serve": "yarn bks:dev",
-    "docs:serve": "yarn workspace beekeeper-studio docs:serve",
-    "web:serve": "yarn sqltools:dev"
+    "build": "yarn workspace sql-code electron:build",
+    "dev": "yarn workspace sql-code electron:serve",
+    "electron:build": "yarn build",
+    "electron:serve": "yarn dev",
+    "docs:serve": "yarn workspace sql-code docs:serve"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.18.0",

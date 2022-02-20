@@ -1,4 +1,4 @@
-// Copyright (c) 2015 The SQLECTRON Team, 2020 Beekeeper Studio team
+// Copyright (c) 2015 The SQLECTRON Team, 2020 Beekeeper Studio team, 2022 SQL Code Maintainers.
 import connectTunnel from './tunnel';
 import clients from './clients';
 import createLogger from '../logger';
@@ -147,7 +147,7 @@ export class DBConnection {
 
   alterRelationSql = bind.bind(null, 'alterRelationSql', this.server, this.database)
   alterRelation = bindAsync.bind(null, 'alterRelation', this.server, this.database)
-  
+
   getQuerySelectTop = getQuerySelectTop.bind(null, this.server, this.database)
   getTableCreateScript = getTableCreateScript.bind(null, this.server, this.database)
   getTableSelectScript = getTableSelectScript.bind(null, this.server, this.database)

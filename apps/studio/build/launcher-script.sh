@@ -13,12 +13,12 @@ done
 SCRIPT_DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 
 if [ ! -f "$CLONE" ]; then
-  exec "$SCRIPT_DIR/beekeeper-studio-bin" "$@"
+  exec "$SCRIPT_DIR/sql-code-bin" "$@"
 else
   UNPRIVILEGED_USERNS_ENABLED=$(cat "$CLONE" 2>/dev/null)
   if [[ $UNPRIVILEGED_USERNS_ENABLED == 0 ]]; then
-    exec "$SCRIPT_DIR/beekeeper-studio-bin" "--no-sandbox" "$@"
+    exec "$SCRIPT_DIR/sql-code-bin" "--no-sandbox" "$@"
   else
-    exec "$SCRIPT_DIR/beekeeper-studio-bin" "$@"
+    exec "$SCRIPT_DIR/sql-code-bin" "$@"
   fi
 fi

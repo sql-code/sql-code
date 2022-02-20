@@ -7,7 +7,7 @@ import { menuItems } from './MenuItems'
 //https://stackoverflow.com/questions/58044322/how-do-i-make-a-separate-menu-for-a-specific-window-in-electron
 export default class BaseMenuBuilder {
 
-  app = "Beekeeper Studio"
+  app = "SQL Code"
 
   constructor(private settings: IGroupedUserSettings, private actionHandlers: IMenuActionHandler) {}
 

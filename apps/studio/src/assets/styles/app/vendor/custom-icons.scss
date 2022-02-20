@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'bk-icons';
+  font-family: 'sqlcode-icons';
   src:
-    url('~@/assets/fonts/beekeeper/bk-icons.ttf') format('truetype'),
-    url('~@/assets/fonts/beekeeper/bk-icons.woff') format('woff'),
-    url('~@/assets/fonts/beekeeper/bk-icons.svg') format('svg');
+    url('~@/assets/fonts/sqlcode/icons.ttf') format('truetype'),
+    url('~@/assets/fonts/sqlcode/icons.woff') format('woff'),
+    url('~@/assets/fonts/sqlcode/icons.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="bk-"], [class*=" bk-"] {
+[class^="icn-"], [class*=" icn-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'bk-icons' !important;
+  font-family: 'sqlcode-icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -24,15 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.bk-pin-outline:before {
+.icn-pin-outline:before {
   content: "\e900";
 }
-.bk-pin:before {
+.icn-pin:before {
   content: "\e901";
 }
-.bk-database:before {
+.icn-database:before {
   content: "\e964";
 }
-.bk-github:before {
+.icn-github:before {
   content: "\eab0";
 }

@@ -30,7 +30,7 @@ $cell-success:           $row-add;
     height: 100%;
   }
   .table-info-table-wrap {
-    padding: 0 1.5rem 3rem;   
+    padding: 0 1.5rem 3rem;
     overflow: hidden;
     overflow-y: auto;
   }
@@ -82,7 +82,7 @@ $cell-success:           $row-add;
       font-weight: 500;
       padding: $gutter-w ($gutter-w * 1.25);
       color: $text-light;
-      transition: color 0.2s ease-in-out, 
+      transition: color 0.2s ease-in-out,
                   box-shadow 0.2s ease-in-out;
       &:hover {
         color: $text-dark;
@@ -96,7 +96,7 @@ $cell-success:           $row-add;
   }
 
 
-  // Table Info 
+  // Table Info
   // --------------------------------
   // Table Info Header
   .table-info {
@@ -262,7 +262,7 @@ $cell-success:           $row-add;
     // Field Rows
     .tabulator-row {
       margin: $row-gutter 0;
-      &.tabulator-row-even, 
+      &.tabulator-row-even,
       &:nth-child(odd){
         background: rgba($theme-base, 0.05)!important;
       }
@@ -293,7 +293,7 @@ $cell-success:           $row-add;
           line-height: $row-height;
           padding: 0!important;
           // Make checkboxes behave correctly
-          .tabulator-bks-checkbox {
+          .tabulator-checkbox {
             padding: $cell-padding / 2;
           }
           pre, input:not([type="checkbox"]) {
@@ -301,7 +301,7 @@ $cell-success:           $row-add;
           }
         }
         &.edited {
-          .tabulator-bks-checkbox {
+          .tabulator-checkbox {
             input[type="checkbox"] {
               &:active,
               &:checked,
@@ -312,7 +312,7 @@ $cell-success:           $row-add;
             }
           }
         }
-        .tabulator-bks-checkbox {
+        .tabulator-checkbox {
           &.read-only {
             input[type="checkbox"] {
               background: transparent!important;
@@ -346,7 +346,7 @@ $cell-success:           $row-add;
         }
 
         // Make checkboxes behave correctly
-        .tabulator-bks-checkbox {
+        .tabulator-checkbox {
           height: $row-height;
         }
 
@@ -389,7 +389,7 @@ $cell-success:           $row-add;
       font-size: 18px;
     }
 
-    &.tabulator-row-even, 
+    &.tabulator-row-even,
     &:nth-child(odd){
       &.inserted {
         background-color: $row-add!important;

@@ -78,7 +78,7 @@ import SidebarLoading from '@/components/common/SidebarLoading.vue'
         }
       },
       openContextMenu(event, item) {
-        this.$bks.openMenu({
+        this.$plugin.openMenu({
           event, item,
           options: [
             {

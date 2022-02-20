@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     class="list-item"
     :title="title"
     @contextmenu.stop.prevent="showContextMenu"
@@ -14,7 +14,7 @@
       <span :class="`connection-label connection-label-color-${labelColor}`"></span>
       <div class="connection-title flex-col expand">
         <div class="title">{{label}}</div>
-        <div class="subtitle"> 
+        <div class="subtitle">
           <span class="bastion" v-if="this.config.sshBastionHost">
             <span class="truncate">{{ this.config.sshBastionHost }}</span>&nbsp;>&nbsp;
           </span>
@@ -74,7 +74,7 @@ export default {
         return path.basename(this.config.defaultDatabase)
       }
 
-      return this.$bks.simpleConnectionString(this.config)
+      return this.$plugin.simpleConnectionString(this.config)
     },
     connectionType() {
       if (this.config.connectionType === 'sqlite') {
@@ -87,18 +87,18 @@ export default {
       if (this.isRecentList) {
         return this.timeAgo.format(this.config.updatedAt)
       } else {
-        return this.$bks.simpleConnectionString(this.config)
+        return this.$plugin.simpleConnectionString(this.config)
       }
     },
     title() {
-      return this.$bks.buildConnectionString(this.config)
+      return this.$plugin.buildConnectionString(this.config)
     },
     savedConnection() {
 
       if (this.isRecentList) {
         if (!this.config.connectionId || !this.config.workspaceId) return null
 
-        return this.connectionConfigs.find((c) => 
+        return this.connectionConfigs.find((c) =>
           c.id === this.config.connectionId &&
           c.workspaceId === this.config.workspaceId
         )
@@ -148,7 +148,7 @@ export default {
       }
       console.log('options', options)
 
-      this.$bks.openMenu({
+      this.$plugin.openMenu({
         event,
         item: this.config,
         options
@@ -190,7 +190,7 @@ export default {
     },
     async copyUrl() {
       try {
-        await this.$copyText(this.$bks.buildConnectionString(this.config))
+        await this.$copyText(this.$plugin.buildConnectionString(this.config))
         this.$noty.success(`The ${this.connectionType} was successfully copied!`)
       } catch (err) {
         this.$noty.success(`The ${this.connectionType} could not be copied!`)

@@ -1,8 +1,8 @@
-# Beekeeper Studio
+# SQL Code
 
-Beekeeper Studio is a cross-platform SQL editor and database manager available for Linux, Mac, and Windows. Beekeeper Studio is MIT licensed so it is free (libre) and free (gratis). 
+SQL Code is a cross-platform SQL editor and database manager available for Linux, Mac, and Windows. SQL Code is MIT licensed so it is free (libre) and free (gratis).
 
-Download now [from our website](https://beekeeperstudio.io)
+Download now [from our website](https://sqlcode.io)
 
 Hey! Please complete my [user survey](https://forms.gle/AjXYJG4ktXYhDZUc7) to help me get to know you better (and thus focus on features that are important to you)
 
@@ -20,9 +20,9 @@ Top feature: It's smooth 🍫, fast 🏎, and you'll actually enjoy using it �
 
 One of our frustrations with other open-source SQL editors and database managers is that they take a 'kitchen sink' approach to features, adding so many features that the UI becomes cluttered and hard to navigate. We wanted a good looking, open source SQL workbench that's powerful, but also easy to use. We couldn't find one, so we created it!
 
-![Beekeeper Studio Screenshot](https://docs.beekeeperstudio.io/assets/img/hero.289d6ce0.jpg)
+![SQL Code Screenshot](./apps/studio/screenshots/main.png)
 
-Beekeeper Studio supports connecting to the following databases:
+SQL Code supports connecting to the following databases:
 
 - SQLite
 - MySQL
@@ -34,34 +34,30 @@ Beekeeper Studio supports connecting to the following databases:
 
 ## Installation
 
-Download the latest release from the [releases page](https://github.com/beekeeper-studio/beekeeper-studio/releases), or from [our website](https://beekeeperstudio.io)
+Download the latest release from the [releases page](https://github.com/sql-code/sql-code/releases), or from [our website](https://sqlcode.io)
 
 ## Documentation
 
-Check out [docs.beekeeperstudio.io](https://docs.beekeeperstudio.io) for user guides, FAQs, troubleshooting tips, and more.
+Check out [docs.sqlcode.io](https://docs.sqlcode.io) for user guides, FAQs, troubleshooting tips, and more.
 
-## Contributing to Beekeeper Studio
+## Contributing to SQL Code
 
 We love *any* community engagement. Even if you're complaining because you don't like something about the app!
 
 Because building an inclusive and welcoming community is important to us, please follow our code of conduct as you engage with the project.
 
-### Contribute without coding
+### Starting the Dev version of SQL Code
 
-We have you covered, read our [guide to contributing in 10 minutes without coding](https://github.com/beekeeper-studio/beekeeper-studio/issues/287).
-
-### Starting the Dev version of Beekeeper Studio
-
-Want to write some code and improve Beekeeper Studio? Getting set-up is easy on Mac, Linux, or Windows.
+Want to write some code and improve SQL Code? Getting set-up is easy on Mac, Linux, or Windows.
 
 ```bash
 # First: Install NodeJS 12+, NPM, and Yarn
 # ...
 
-# 1. Fork the Beekeeper Studio Repo (click fork button at top right of this screen)
+# 1. Fork the SQL Code Repo (click fork button at top right of this screen)
 # 2. Check out your fork:
-git clone git@github.com:<your-username>/beekeeper-studio.git beekeeper-studio
-cd beekeeper-studio/
+git clone git@github.com:<your-username>/sql-code.git sql-code
+cd sql-code/
 yarn install # installs dependencies
 
 # Now you can start the app:
@@ -74,7 +70,7 @@ This repo is now a monorepo, we have several places with code, but only really a
 
 All app code lives in `apps/studio`, some shared code lives in `shared/src`. This is shared with other apps.
 
-Beekeeper Studio has two entry points:
+SQL Code has two entry points:
 - `background.js` - this is the electron-side code that controls native things like showing windows.
 - `main.js` - this is the entry point for the Vue.js app. You can follow the Vue component breadcrumbs from `App.vue` to find the screen you need.
 
@@ -90,7 +86,7 @@ Beekeeper Studio has two entry points:
 ## Maintainer notes (casual readers can ignore this stuff)
 
 
-### Release Process 
+### Release Process
 
 1. Up the version number in package.json
 2. Replace `build/release-notes.md` with the latest release notes. Follow the format that is there.
@@ -115,4 +111,4 @@ Post Release:
 
 ## Big Thanks
 
-Beekeeper Studio wouldn't exist without [Sqlectron-core](https://github.com/sqlectron/sqlectron-core), the core database libraries from the [Sqlectron project](https://github.com/sqlectron/sqlectron-gui). Beekeeper Studio started as an experimental fork of that repository. A big thanks to @maxcnunes and the rest of the Sqlectron community.
+SQL Code wouldn't exist without [Beekeeper Studio](https://github.com/beekeeper-studio/beekeeper-studio/) and [Sqlectron-core](https://github.com/sqlectron/sqlectron-core), the core database libraries from the [Sqlectron project](https://github.com/sqlectron/sqlectron-gui). SQL Code started as an experimental fork of that repository. A big thanks to @maxcnunes and the rest of the Sqlectron community.

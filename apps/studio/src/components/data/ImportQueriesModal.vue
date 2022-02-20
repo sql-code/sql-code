@@ -1,5 +1,5 @@
 <template>
-  <modal name="import-queries" class="vue-dialog beekeeper-modal" @closed="clear">
+  <modal name="import-queries" class="vue-dialog sqlcode-modal" @closed="clear">
     <div class="dialog-content">
       <div class="dialog-c-title">Import Queries</div>
       <div class="dialog-c-subtitle">Importing a query will <strong>copy</strong> it from your local workspace into the personal folder of your team workspace.</div>
@@ -10,8 +10,8 @@
             <div v-if="!queries || !queries.length" class="list-item">
               Import not available: You don't have any queries in your local workspace.
             </div>
-            <div 
-              class="list-item" 
+            <div
+              class="list-item"
               v-for="query in queries"
               :key="query.id"
             >

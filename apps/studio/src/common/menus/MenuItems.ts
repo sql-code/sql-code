@@ -83,7 +83,7 @@ export function menuItems(actionHandler: IMenuActionHandler, settings: IGroupedU
     // help
     about: {
       id: 'about',
-      label: 'About Beekeeper Studio',
+      label: 'About SQL Code',
       click: actionHandler.about
     },
     devtools: {
@@ -110,10 +110,10 @@ export function menuItems(actionHandler: IMenuActionHandler, settings: IGroupedU
       accelerator: "CommandOrControl+Shift+N",
       click: actionHandler.newWindow
     },
-    addBeekeeper: {
-      id: 'add-beekeeper',
-      label: "Add Beekeeper's Database",
-      click: actionHandler.addBeekeeper
+    addSQLCode: {
+      id: 'add-sql-code-db',
+      label: "Add SQL Code's Database",
+      click: actionHandler.addSQLCode
     },
     newTab: {
       id: "new-query-menu",

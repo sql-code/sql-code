@@ -1,5 +1,5 @@
 <template>
-<div class="connection-button flex flex-middle" v-if="config" :title="$bks.buildConnectionString(config)">
+<div class="connection-button flex flex-middle" v-if="config" :title="$plugin.buildConnectionString(config)">
   <x-button class="btn btn-link btn-icon" menu>
     <i class="material-icons">link</i>
     <span class="connection-name truncate expand">{{connectionName}}</span>
@@ -15,7 +15,7 @@
     </x-menu>
   </x-button>
 
-  <modal class="vue-dialog beekeeper-modal save-connection-modal" name="config-save-modal" height="auto" :scrollable="true">
+  <modal class="vue-dialog sqlcode-modal save-connection-modal" name="config-save-modal" height="auto" :scrollable="true">
     <div class="dialog-content">
       <div v-if="errors" class="alert alert-danger">
         <i class="material-icons">error_outline</i>
@@ -29,8 +29,8 @@
       <SaveConnectionForm :selectInput="true" @cancel="$modal.hide('config-save-modal')" :canCancel="true" :config="config" @save="save"></SaveConnectionForm>
     </div>
   </modal>
-  <modal class="vue-dialog beekeeper-modal" name="running-exports-modal" height="auto" :scrollable="true">
-    <form @submit.prevent="disconnect(true)">      
+  <modal class="vue-dialog sqlcode-modal" name="running-exports-modal" height="auto" :scrollable="true">
+    <form @submit.prevent="disconnect(true)">
       <div class="dialog-content">
         <div class="dialog-c-title">Confirm Disconnect</div>
         There are active exports running. Are you sure you want to disconnect?
@@ -62,7 +62,7 @@ export default {
       connectionName() {
         const config = this.config
         if (!config) return 'Connection'
-        const name = config.name ? config.name : this.$bks.simpleConnectionString(config)
+        const name = config.name ? config.name : this.$plugin.simpleConnectionString(config)
         return name
       },
       connectionType() {

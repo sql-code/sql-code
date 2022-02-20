@@ -1,6 +1,6 @@
 <template>
 <div class="style-wrapper">
-    <div class="beekeeper-studio-wrapper">
+    <div class="sql-code-wrapper">
       <titlebar v-if="$config.isMac || menuStyle === 'client'"></titlebar>
       <template v-if="storeInitialized">
         <connection-interface v-if="!connection"></connection-interface>
@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     connection() {
-      
+
       return this.$store.state.connection
     },
     ...mapState(['storeInitialized']),

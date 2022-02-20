@@ -5,7 +5,7 @@
         @click.prevent="$modal.show('import-modal')"
       ><slot></slot></a>
       <modal
-        class="vue-dialog beekeeper-modal import-modal"
+        class="vue-dialog sqlcode-modal import-modal"
         name="import-modal"
         height="auto"
         :scrollable="true"

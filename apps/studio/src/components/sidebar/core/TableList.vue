@@ -90,7 +90,7 @@
                 :connection="connection"
                 :forceExpand="allExpanded"
                 :forceCollapse="listItemsCollapsed"
-                @contextmenu.prevent.stop="$bks.openMenu({ item: table, event: $event, options: tableMenuOptions})"
+                @contextmenu.prevent.stop="$plugin.openMenu({ item: table, event: $event, options: tableMenuOptions})"
               ></table-list-item>
               <routine-list-item
                 v-for="routine in blob.routines"
@@ -101,7 +101,7 @@
                 :connection="connection"
                 :forceExpand="allExpanded"
                 :forceCollapse="listItemsCollapsed"
-                @contextmenu.prevent.stop="$bks.openMenu({item: routine, event: $event, options: routineMenuOptions})"
+                @contextmenu.prevent.stop="$plugin.openMenu({item: routine, event: $event, options: routineMenuOptions})"
               >
               </routine-list-item>
             </sidebar-folder>

@@ -78,7 +78,7 @@
     </div>
 
     <!-- Save Modal -->
-    <modal class="vue-dialog beekeeper-modal" name="save-modal" @closed="selectEditor" @opened="selectTitleInput" height="auto" :scrollable="true">
+    <modal class="vue-dialog sqlcode-modal" name="save-modal" @closed="selectEditor" @opened="selectTitleInput" height="auto" :scrollable="true">
       <form v-if="query" @submit.prevent="saveQuery">
         <div class="dialog-content">
           <div class="dialog-c-title">Saved Query Name</div>
@@ -89,7 +89,7 @@
             </div>
           </div>
         </div>
-        <div class="vue-dialog-buttons">          
+        <div class="vue-dialog-buttons">
           <button class="btn btn-flat" type="button" @click.prevent="$modal.hide('save-modal')">Cancel</button>
           <button class="btn btn-primary" type="submit">Save</button>
         </div>
@@ -97,7 +97,7 @@
     </modal>
 
     <!-- Parameter modal -->
-    <modal class="vue-dialog beekeeper-modal" name="parameters-modal" @opened="selectFirstParameter" @closed="selectEditor" height="auto" :scrollable="true">
+    <modal class="vue-dialog sqlcode-modal" name="parameters-modal" @opened="selectFirstParameter" @closed="selectEditor" height="auto" :scrollable="true">
       <form @submit.prevent="submitQuery(queryForExecution, true)">
         <div class="dialog-content">
           <div class="dialog-c-title">Provide parameter values</div>
@@ -148,7 +148,7 @@
   import MergeManager from '@/components/editor/MergeManager.vue'
 import { AppEvent } from '@/common/AppEvent'
 import { FavoriteQuery } from '@/common/appdb/models/favorite_query'
-  
+
   const log = rawlog.scope('query-editor')
   const isEmpty = (s) => _.isEmpty(_.trim(s))
   const editorDefault = "\n\n\n\n\n\n\n\n\n\n"
@@ -229,7 +229,7 @@ import { FavoriteQuery } from '@/common/appdb/models/favorite_query'
           const v = this.queryParameterValues[param]
           if (!v || _.isEmpty(v.trim())) {
             result = true
-          } 
+          }
         })
         return result
       },
@@ -343,7 +343,7 @@ import { FavoriteQuery } from '@/common/appdb/models/favorite_query'
       unsavedChanges() {
         if (_.trim(this.unsavedText) === "" && _.trim(this.originalText) === "") return false
 
-        return !this.query?.id || 
+        return !this.query?.id ||
           _.trim(this.unsavedText) !== _.trim(this.originalText)
       },
     },
@@ -542,7 +542,7 @@ import { FavoriteQuery } from '@/common/appdb/models/favorite_query'
         this.$root.$emit(AppEvent.closeTab)
       },
       showContextMenu(event) {
-        this.$bks.openMenu({
+        this.$plugin.openMenu({
           item: this.tab,
           options: [
             {
@@ -603,7 +603,7 @@ import { FavoriteQuery } from '@/common/appdb/models/favorite_query'
             console.log("TQE Saving", payload)
             const id = await this.$store.dispatch('data/queries/save', payload)
             this.tab.queryId = id
-            
+
             this.$nextTick(() => {
               this.unsavedText = this.query.text
               this.tab.title = this.query.title

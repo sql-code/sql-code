@@ -22,7 +22,7 @@
         </div>
       </a>
     </li>
-    <modal name="sure" class="beekeeper-modal vue-dialog sure" @opened="$refs.no.focus()">
+    <modal name="sure" class="sqlcode-modal vue-dialog sure" @opened="$refs.no.focus()">
       <div class="dialog-content">
         <div class="dialog-c-title">Are you sure?</div>
         <p>You will lose unsaved changes</p>
