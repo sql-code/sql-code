@@ -92,7 +92,7 @@ SQL Code has two entry points:
 2. Replace `build/release-notes.md` with the latest release notes. Follow the format that is there.
   - run `git log <last-tag>..HEAD --oneline | grep 'Merge pull'` to find PRs merged
 2. Commit
-3. Push to master
+3. Push to main
 4. Create a tag `git tag v<version>`. It must start with a 'v'
 5. `git push origin <tagname>`
   - Now wait for the build/publish action to complete on Github
