@@ -1,7 +1,8 @@
 import _ from 'lodash'
 import path from 'path'
-import { BrowserWindow } from "electron"
+import { BrowserWindow } from 'electron'
 import electron from 'electron'
+import * as remoteMain from '@electron/remote/main'
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib"
 import platformInfo from '../common/platform_info'
 import { IGroupedUserSettings } from '../common/appdb/models/user_setting'
@@ -37,13 +38,13 @@ class SQLCodeWindow {
       titleBarStyle: 'hidden',
       frame: showFrame,
       webPreferences: {
-        enableRemoteModule: true,
         nodeIntegration: Boolean(process.env.ELECTRON_NODE_INTEGRATION),
         contextIsolation: false,
         spellcheck: false
       },
       icon: getIcon()
     })
+    remoteMain.enable(this.win.webContents)
 
     const runningInWebpack = !!process.env.WEBPACK_DEV_SERVER_URL
     let appUrl = process.env.WEBPACK_DEV_SERVER_URL || 'app://./index.html'

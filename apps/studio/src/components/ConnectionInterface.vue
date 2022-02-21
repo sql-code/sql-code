@@ -1,9 +1,9 @@
 <template>
   <div class="interface connection-interface">
     <div class="interface-wrap row" @dragover.prevent="" @drop.prevent="maybeLoadSqlite">
-      <sidebar class="connection-sidebar" ref="sidebar" v-show="sidebarShown">
-        <connection-sidebar :selectedConfig="config" @remove="remove" @duplicate="duplicate" @edit="edit" @connect="handleConnect" @create="create"></connection-sidebar>
-      </sidebar>
+      <side-bar class="connection-sidebar" ref="sidebar" v-show="sidebarShown">
+        <connection-sidebar :selectedConfig="config" @remove="remove" @duplicate="duplicate" @edit="edit" @connect="handleConnect" @create="create" />
+      </side-bar>
       <div ref="content" class="connection-main page-content flex-col" id="page-content">
         <div class="small-wrap expand">
           <div class="card-flat padding">
@@ -63,7 +63,7 @@
   import ConnectionSidebar from './sidebar/ConnectionSidebar'
   import MysqlForm from './connection/MysqlForm'
   import PostgresForm from './connection/PostgresForm'
-  import Sidebar from './common/Sidebar'
+  import SideBar from './common/SideBar'
   import SqliteForm from './connection/SqliteForm'
   import SqlServerForm from './connection/SqlServerForm'
   import SaveConnectionForm from './connection/SaveConnectionForm'
@@ -79,7 +79,7 @@ import { mapState } from 'vuex'
   // import ImportUrlForm from './connection/ImportUrlForm';
 
   export default {
-    components: { ConnectionSidebar, MysqlForm, PostgresForm, Sidebar, SqliteForm, SqlServerForm, SaveConnectionForm, ImportButton, ErrorAlert, },
+    components: { ConnectionSidebar, MysqlForm, PostgresForm, SideBar, SqliteForm, SqlServerForm, SaveConnectionForm, ImportButton, ErrorAlert, },
 
     data() {
       return {

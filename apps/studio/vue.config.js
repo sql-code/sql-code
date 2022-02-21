@@ -163,8 +163,12 @@ module.exports = {
   },
   configureWebpack: {
     plugins: [
-      new webpack.IgnorePlugin(/pg-native/, /pg/),
-      new webpack.IgnorePlugin(/kerberos/, /cassandra-driver/),
+      new webpack.IgnorePlugin({
+        resourceRegExp: /pg-native/
+      }),
+      // new webpack.IgnorePlugin({
+      //   resourceRegExp: /kerberos|cassandra-driver/
+      // }),
       new webpack.ProvidePlugin({
         diff_match_patch: 'diff-match-patch',
         DIFF_EQUAL: ['diff-match-patch', 'DIFF_EQUAL'],
@@ -172,12 +176,12 @@ module.exports = {
         DIFF_DELETE: ['diff-match-patch', 'DIFF_DELETE'],
       }),
     ],
-    node: {
-      dns: 'mock'
-    },
     resolve: {
       alias: {
         "@shared": path.resolve(__dirname, '../../shared/src')
+      },
+      fallback: {
+        dns: 'mock'
       }
     },
     module: {

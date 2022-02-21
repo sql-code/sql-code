@@ -4,12 +4,12 @@
       <progress-bar />
     </div>
     <div v-else class="interface-wrap row">
-      <sidebar ref="sidebar" :class="{hide: !sidebarShown}">
+      <side-bar ref="sidebar" :class="{hide: !sidebarShown}">
         <core-sidebar @databaseSelected="databaseSelected" @toggleSidebar="toggleSidebar" :connection="connection" :sidebarShown="sidebarShown"></core-sidebar>
-        <statusbar>
-          <ConnectionButton></ConnectionButton>
-        </statusbar>
-      </sidebar>
+        <status-bar>
+          <ConnectionButton />
+        </status-bar>
+      </side-bar>
       <div ref="content" class="page-content flex-col" id="page-content">
         <core-tabs :connection="connection"></core-tabs>
       </div>
@@ -20,11 +20,11 @@
 </template>
 
 <script>
-  import Sidebar from './common/Sidebar'
+  import SideBar from './common/SideBar'
   import CoreSidebar from './sidebar/CoreSidebar'
   import CoreTabs from './CoreTabs'
   import Split from 'split.js'
-  import Statusbar from './common/StatusBar'
+  import StatusBar from './common/StatusBar'
   import ConnectionButton from './sidebar/core/ConnectionButton'
   import ExportManager from './export/ExportManager'
   import {AppEvent} from '../common/AppEvent'
@@ -33,7 +33,7 @@
   import ProgressBar from './editor/ProgressBar.vue'
   import { CloudQueryModule } from '@/store/modules/data/query/CloudQueryModule'
   export default {
-    components: { CoreSidebar, CoreTabs, Sidebar, Statusbar, ConnectionButton, ExportManager, QuickSearch, ProgressBar},
+    components: { CoreSidebar, CoreTabs, SideBar, StatusBar, ConnectionButton, ExportManager, QuickSearch, ProgressBar},
     props: [ 'connection' ],
     data() {
       return {

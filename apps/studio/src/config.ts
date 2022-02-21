@@ -1,4 +1,4 @@
-import { remote } from 'electron'
+import * as remote from '@electron/remote'
 import { execSync } from 'child_process'
 import platformInfo from './common/platform_info'
 import { loadEncryptionKey } from './common/encryption_key'

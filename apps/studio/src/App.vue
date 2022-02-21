@@ -1,7 +1,7 @@
 <template>
 <div class="style-wrapper">
     <div class="sql-code-wrapper">
-      <titlebar v-if="$config.isMac || menuStyle === 'client'"></titlebar>
+      <title-bar v-if="$config.isMac || menuStyle === 'client'" />
       <template v-if="storeInitialized">
         <connection-interface v-if="!connection"></connection-interface>
         <core-interface @databaseSelected="databaseSelected" v-else :connection="connection"></core-interface>
@@ -21,7 +21,7 @@
 <script>
 import { ipcRenderer } from 'electron'
 import { mapGetters, mapState } from 'vuex'
-import Titlebar from './components/Titlebar'
+import TitleBar from './components/TitleBar'
 import CoreInterface from './components/CoreInterface'
 import ConnectionInterface from './components/ConnectionInterface'
 import AutoUpdater from './components/AutoUpdater'
@@ -34,7 +34,7 @@ import ImportConnectionsModal from '@/components/data/ImportConnectionsModal.vue
 export default {
   name: 'app',
   components: {
-    CoreInterface, ConnectionInterface, Titlebar, AutoUpdater,
+    CoreInterface, ConnectionInterface, TitleBar, AutoUpdater,
     StateManager, DataManager, WorkspaceSignInModal, ImportQueriesModal,
     ImportConnectionsModal
   },

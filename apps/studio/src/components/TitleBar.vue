@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import {remote} from 'electron'
+import * as remote from '@electron/remote'
 import AppMenu from './menu/NewAppMenu'
 export default {
   components: { AppMenu },

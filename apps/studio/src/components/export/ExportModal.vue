@@ -79,7 +79,7 @@
               <component
                 v-bind:is="selectedExportFormat.component"
                 v-model="outputOptions"
-              ></component>
+              />
               <div class="modal-form export-form export-advanced-options">
                 <div class="form-group row">
                   <label title="How many records to read at once from the cursor">Chunk size</label>
@@ -106,7 +106,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <div class="vue-dialog-buttons">
@@ -132,10 +131,9 @@
 <script>
 import * as path from 'path'
 import dateFormat from 'dateformat'
-import { remote } from "electron"
-import { mapMutations } from "vuex"
+import { mapMutations } from 'vuex'
 import rawlog from 'electron-log'
-import { ExportFormCSV, ExportFormJSON, ExportFormSQL, ExportFormJsonLine } from "./forms"
+import { ExportFormCSV, ExportFormJSON, ExportFormSQL, ExportFormJsonLine } from './forms'
 import FilePicker from '../common/form/FilePicker'
 import platformInfo from '../../common/platform_info'
 const log = rawlog.scope('export/export-modal')

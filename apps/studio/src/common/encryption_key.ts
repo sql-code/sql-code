@@ -30,10 +30,10 @@ export function loadEncryptionKey() {
     const result = {
       'encryptionKey': newKey
     }
-    fs.writeFileSync(keyFile, encryptor.encrypt(result), 'UTF8')
+    fs.writeFileSync(keyFile, encryptor.encrypt(result), { encoding: 'utf8' })
   }
 
-  const encryptedData = fs.readFileSync(keyFile, 'UTF8')
+  const encryptedData = fs.readFileSync(keyFile, { encoding: 'utf8' })
   const data = encryptor.decrypt(encryptedData)
   _encryptionKey = data['encryptionKey'] as string
   return _encryptionKey

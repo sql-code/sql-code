@@ -2,9 +2,9 @@
   <a @click.prevent.stop="click"><slot></slot></a>
 </template>
 <script>
-import { remote } from 'electron'
-export default {
+import * as remote from '@electron/remote'
 
+export default {
   props: ['href'],
   methods: {
     click() {

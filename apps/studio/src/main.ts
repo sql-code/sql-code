@@ -71,6 +71,7 @@ import _ from 'lodash'
 
     log.info("starting logging")
     tls.DEFAULT_MIN_VERSION = "TLSv1"
+    TimeAgo.setDefaultLocale(en.locale)
     TimeAgo.addLocale(en)
     // @ts-ignore
     Tabulator.prototype.defaultOptions.layout = "fitDataFill";

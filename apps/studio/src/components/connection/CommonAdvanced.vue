@@ -105,11 +105,11 @@
   </div>
 </template>
 <script>
+  import * as remote from '@electron/remote'
+  import { join as pathJoin } from 'path'
+
   import FilePicker from '@/components/common/form/FilePicker'
   import ExternalLink from '@/components/common/ExternalLink'
-
-  import { remote } from 'electron'
-  import { join as pathJoin } from 'path'
 
   export default {
     props: ['config'],
