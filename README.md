@@ -4,8 +4,6 @@ SQL Code is a cross-platform SQL editor and database manager available for Linux
 
 Download now [from our website](https://sqlcode.io)
 
-Hey! Please complete my [user survey](https://forms.gle/AjXYJG4ktXYhDZUc7) to help me get to know you better (and thus focus on features that are important to you)
-
 ## Features
 
 Top feature: It's smooth 🍫, fast 🏎, and you'll actually enjoy using it 🥰
